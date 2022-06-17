@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Magnifica Questionnaire Form Wizard includes Coronavirus Health questionnaire">
+    <meta name="author" content="Ansonika">
+    <title>Codeloccol | Formulaire d'application</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/LOGO-CODELOCCOL-FAV.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<header>
+		<div class="container">
+		    <div class="row">
+                <div class="col-3">
+                     <a href="index.html"><img src="img/Codeloccol.png" alt="" width="178" height="45" class="d-none d-md-block"><img src="img/Codeloccol2 (1).png" alt="" width="62" height="45" class="d-block d-md-none"></a>
+                </div>
+                <div class="col-9">
+                    <div id="social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/codeloccol"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/codeloccol"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/codeloccol/"><i class="icon-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/codeloccol/"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+					<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+					<!-- /menu button -->
+                    <nav>
+						<ul class="cd-primary-nav">
+							<li><a href="index.html" class="animated_link">Retour au formulaire</a></li>
+							<li><a href="instructions.html" class="animated_link">Instructions</a></li>
+							<li><a href="contacts.html" class="animated_link">Contactez-nous</a></li>
+						</ul>
+					</nav>
+					<!-- /menu -->
+                </div>
+            </div>
+		</div>
+		<!-- /container -->
+	</header>
+	<!-- /Header -->
+
+	<div class="container">
+    <div id="form_container">
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div id="left_form">
+                    <figure><img src="img/1540445753.svg" alt="" width="100" height="100"></figure>
+                    <h2>Codeloccol <span>Formulaire d'admission</span></h2>
+                    <p>Ce formulaire vous permez de candidater en ligne à Codeloccol.</p>
+                    <a href="www.codeloccol.org" class="btn_1 rounded yellow purchase" target="_parent">Codeloccol.org</a>
+	                <a href="#wizard_container" class="btn_1 rounded mobile_btn yellow">Commence ici !</a>
+                    <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div id="wizard_container">
+                    <div id="top-wizard">
+                        <div id="progressbar"></div>
+                        <span id="location"></span>
+                    </div>
+                    <!-- /top-wizard -->
+                    <form id="wrapped" method="post">
+                        <input id="website" name="website" type="text" value="">
+                        <!-- ce input est là pour de raisons de sécurité -->
+                        <div id="middle-wizard">
+                            <div class="step">
+                                <h3 class="main_question"><i class="arrow_right"></i>Avant toute chose, peux tu décliner ton identité ?</h3>
+                                <div class="form-group add_top_30">
+                                    <label>Nom et Prénom</label>
+                                    <input type="text" name="name" id="name" class="form-control required" onchange="getVals(this, 'name_field');">
+                                </div>
+                                <div class="form-group">
+                                    <label>Courriel</label>
+                                    <input type="email" name="email" id="email" class="form-control required" onchange="getVals(this, 'email_field');">
+                                </div>
+                                <div class="form-group">
+                                    <label>Pays</label>
+                                    <select name="pays" id="pays" class="countrypicker form-control required" data-live-search="true" data-default="Niger" data-flag="true"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ville</label>
+                                    <input type="select" name="ville" id="ville" class="form-control required" onchange="getVals(this, 'email_field');">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile (whatsapp)</label>
+                                    <input type="text" name="phone" id="phone" class="form-control required">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-4">
+                                        <label>Age</label>
+                                        <div class="form-group radio_input">
+                                            <input type="text" name="age" id="age" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-8">
+                                        <label>Genre</label>
+                                        <div class="form-group radio_input">
+                                            <label class="container_radio mr-3">Homme
+                                                <input type="radio" name="gender" value="Male" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container_radio">Femme
+                                                <input type="radio" name="gender" value="Female" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                            <!--step-->
+
+                             <!-- /Debut Branche handicap ============================== -->
+                             <div class="step" data-state="branchtype">
+                                <label class="custom add_top_10"></label>
+                                <h3 class="main_question"><i class="arrow_right"></i>Es tu en situation d'handicap ?</h3>
+                                <div class="form-group">
+                                    <label class="container_radio version_2">Oui
+                                        <input type="radio" name="question_h" value="houi" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2">Non
+                                        <input type="radio" name="question_h" value="hnon" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                             </div>
+                                
+                        
+
+                            <!-- /handicap > Oui ============================== -->
+                            <div class="branch" id="houi">
+                                <div class="step" data-state="hnon">
+                                    <h3 class="main_question"><i class="arrow_right"></i>Peux tu précisez le type d'handicap ?</h3>
+                                    <div class="form-group">
+                                        <input type="text" id="handicap" name="handicap" class="form-control required">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /fin step-->
+
+                            <div class="step" id="hnon">
+                                <h3 class="main_question"><i class="arrow_right"></i>Pourquoi le choix coding ?</h3>
+                                <div class="form-group">
+                                    <label for="question_2">En utilisant entre 100 et 250 mots, dis nous tes raisons pour apprendre le Coding</label>
+                                    <textarea type="text" id="question_2" name="question_2" class="form-control required" rows="10"></textarea>
+                                    <p>
+                                        Nbre de mots :
+                                        <span id="show">0</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/step-->
+
+                           
+
+                            <!-- /Debut Branche ============================== -->
+                            <div class="step" data-state="branchtype">
+                                <label class="custom add_top_10"></label>
+                                <h3 class="main_question"><i class="arrow_right"></i>As tu déjà essayer d'apprendre le coding ?</h3>
+                                <div class="form-group">
+                                    <label class="container_radio version_2">Oui
+                                        <input type="radio" name="question_3" value="Yes" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2">Non
+                                        <input type="radio" name="question_3" value="No" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio version_2" hidden>Default
+                                        <input type="radio" name="question_3" value="De" class="required">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- /essayer d'apprendre le coding > Oui ============================== -->
+                            <div class="branch" id="Yes">
+                                <div class="step" data-state="De">
+                                    <h3 class="main_question"><i class="arrow_right"></i>Racontes-nous ton aventure</h3>
+                                    <div class="form-group">
+                                        <label for="question_5">Racontes nous en quelques lignes les défis et les succès rencontrés</label>
+                                        <textarea type="text" id="question_5" name="question_5" class="form-control required" rows="10" cols="100"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /fin step-->
+
+                            <!-- /essayer d'apprendre le coding > Non ============================== -->
+                            <div class="branch" id="No">
+                                <div class="step" data-state="De">
+                                    <h3 class="main_question"><i class="arrow_right"></i>Pourquoi ne t'es tu pas lancé ?</h3>
+                                    <div class="form-group">
+                                        <label for="question_6">Dis nous en quelques lignes les raisons pour lesquelles tu n'a pas encore commencé</label>
+                                        <textarea type="text" id="question_6" name="question_6" class="form-control required" rows="10" cols="150"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /fin step-->
+                            <!-- /Fin branche ============================== -->
+
+                            <div class="step" id="De">
+                                <h3 class="main_question"><i class="arrow_right"></i>Que penses tu de cette phrase "la meilleure façon d'apprendre est de pratiquer"</h3>
+                                <div class="form-group">
+                                    <label for="question_7">Dis nous ta comprenhension en un paragraphe de 100 à 250 mots</label>
+                                    <textarea type="text" id="question_7" name="question_7" class="form-control required" rows="10" cols="150"></textarea>
+                                    <p>
+                                        Nbre de mots :
+                                        <span id="show_2">0</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- /fin step-->
+
+                            <div class="step">
+                                <h3 class="main_question"><i class="arrow_right"></i>Dernière question à propos de toi : Que voudrais-tu accomplir à la fin de ce programme ?</h3>
+                                <div class="form-group">
+                                    <label for="question_8">Dis nous en quelques lignes ton projet</label>
+                                    <textarea type="text" id="question_8" name="question_8" class="form-control required" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <!-- /fin step-->
+
+                            <div class="step">
+                                <h3 class="main_question"><i class="arrow_right"></i>...et voilà c'est tout comme questions. C'était intéressant n'est-ce pas !!! OK OK, dernière question, que penses-tu de l'environnement Tech de ton Pays ?</h3>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="question_9">Partages tes impressions en quelques lignes</label>
+                                        <textarea type="text" id="question_9" name="question_9" class="form-control required" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /fin step-->
+
+                            <div class="submit step" id="end">
+                                <div class="summary">
+                                    <div class="wrapper">
+                                        <h3>Nous vous remercions pour votre candidature<br><span id="name_field"></span>!</h3>
+                                        <p>Nous vous contacterons très bientot à ce courriel <strong id="email_field"></strong> pour la suite de la démarche.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="form-group terms">
+                                            <label class="container_check">Nous prions d'accepter nos <a href="#" data-toggle="modal" data-target="#terms-txt">Termes et conditions</a> avant de soumettre
+                                                <input type="checkbox" name="terms" value="Yes" class="required">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Fin last step-->
+
+                        </div>
+                        <!-- /Fin middle-wizard -->
+                        <div id="bottom-wizard">
+                            <button type="button" name="backward" class="backward">Pre</button>
+                            <button type="button" name="forward" class="forward">Sui</button>
+                            <button type="submit" name="process" class="submit">Envoyer</button>
+                        </div>
+                        <!-- /Fin bottom-wizard -->
+                    </form>
+                </div>
+                <!-- /Fin Wizard container -->
+            </div>
+        </div><!-- /Row -->
+    </div><!-- /Fin Form_container -->
+</div>
+<!-- /Fin container -->
+
+<div class="container">
+    <footer id="home" class="clearfix">
+        <p>© 2022 Codeloccol</p>
+        <ul>
+            <li><a href="wwww.codeloccol.org" class="animated_link">Codeloccol.org</a></li>
+            <li><a href="instructions.html" class="animated_link">Instructions</a></li>
+            <li><a href="contacts.html" class="animated_link">Contactez-nous</a></li>
+        </ul>
+    </footer>
+    <!-- Fin footer-->
+</div>
+<!-- /Fin container -->
+
+<div class="cd-overlay-nav">
+    <span></span>
+</div>
+<!-- /cd-overlay-nav -->
+<div class="cd-overlay-content">
+    <span></span>
+</div>
+<!-- /cd-overlay-content -->
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Termes et conditions</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p>Afin d'accéder à Codeloccol, vous devez avoir <strong>18 ans révolu au 31 décembre 2022</strong></p>
+					<p>Sauf si vous êtes bénéficiaire d'une de nos <strong>bourses</strong>, vous vous engagez à verser 15% du montant des frais d'apprentissage dès la rentrée. Vous vous engagez également à payer le montant restant sur une période de deux ans après l'obtention de votre certificat</p>
+					<p>Enfin, vous vous engagez à vous consacrer avec discipline et devouement à l'apprentissage du coding et/ou des autres métiers du numérique. L'apprentissage selon notre approche est difficile mais éfficace. Vous allez pratiquer 24h/24, vous vivrez des moments extrêmement difficiles. <Strong>Si vous n'êtes pas sûr de tenir, ne vous y engager pas. Laissez la place aux plus persévérants.</Strong></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Fermer</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Modal info -->
+	<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="more-infoLabel">Foire aux questions</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p><strong>Quelle diplôme aurais je à l'issue de ma formation à Codeloccol ?</strong></p> 
+                    <p>Codeloccol n'est pas un établissement d'enseignement supérieur, nous ne delivrons pas de diplôme par conséquent. Nous sommes un centre d'apprentissage pour les métiers du Digital. A la fin de la formation l'apprenant obtient une Certification Codeloccol, reconnu par l'ANSI et nos différents partenaires.</p>
+                    <p><strong>Quels sont les frais d'accès à Codeloccol ?</strong></p>
+					<p>Nos frais pour une année d'apprentissage s'élèvent à <strong>deux million de Francs CFA</strong>. L'apprenant s'acquitte de <strong>15%</strong> soit <strong>trois cent mille francs CFA</strong>. Le montant restant est payable pendant une période de deux ans après la formation.</p>
+					<p><strong>Quels sont mes possibilités après ma formation à Codeloccol ?</strong></p>
+                    <p>Après votre formation à Codeloccol vous pouvez travailler en tant que freelance pour les entreprises/startup locales ou internationnales, créer votre propre startup dans le numérique ou travailler dans le cadre du programme <strong>Niger 2.0</strong> du gouvernement nigérien. Pour toutes ces trois options nous vous accompagnons à trouvé les bonnes opportunités.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Fermer</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/common_functions.js"></script>
+    <script>
+        document
+          .querySelector("#question_2")
+          .addEventListener("keyup", function countWord() {
+            let res = [];
+            let str = this.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+            str.map((s) => {
+              let trimStr = s.trim();
+              if (trimStr.length > 0) {
+                res.push(trimStr);
+              }
+            });
+            document.querySelector("#show").innerText = res.length;
+          });
+      </script>
+       <script>
+        document
+          .querySelector("#question_7")
+          .addEventListener("keyup", function countWord() {
+            let res = [];
+            let str = this.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+            str.map((s) => {
+              let trimStr = s.trim();
+              if (trimStr.length > 0) {
+                res.push(trimStr);
+              }
+            });
+            document.querySelector("#show_2").innerText = res.length;
+          });
+      </script>
+
+	<!-- Wizard script-->
+	<script src="js/func_1.js"></script>
+
+    <!--script src="js/jquery-1.11.0.min.js" type="text/javascript"></script-->
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/countrypicker.min.js"></script>
+
+</body>
+</html>
